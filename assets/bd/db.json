@@ -1,0 +1,14 @@
+[
+    {
+        "nombre": "Vino Blanco Sauvignon",
+        "imagen_url": "./assets/DB/imagenes/sauvignon.jpeg"
+    },
+    {
+        "nombre": "Vino Negro Sauvignon",
+        "imagen_url": "./assets/DB/imagenes/sauvignon.jpeg"
+    },
+    {
+        "nombre": "Vino Rojo Sauvignon",
+        "imagen_url": "./assets/DB/imagenes/sauvignon.jpeg"
+    }
+]

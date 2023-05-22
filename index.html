@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styele.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>Buscador de compatibilidad</h1>
+      <img src="assets/img/logo.png" alt="">
+      <div id="app">
+<!--        
+        <p>{{cuandoSeCrea}}</p>
+        <div v-if="user !== null">
+          <h3>{{user.nombre}}</h3>
+          <h4>{{user.email}}</h4>
+        </div>
+        <div v-else class="center">
+          <vue-loader></vue-loader>
+        </div> -->
+        <hr />
+        <label for="buscar">Buscar:</label>
+        <input type="text" name="buscar" id="txtBuscar" placeholder="Buscar codigos">
+        <button @click="codigoHandler">Traer Datos</button>
+        
+        <table v-if="cogidos!==null">
+          <tr>
+            <td>PCB USB</td>
+            <td>PCB SATA</td>
+            <td>FUENTE</td>
+            <td>PROBADOS POR MI</td>
+            <td>OBSERVACIONES</td>
+            <td>HDD QUE LLEVA ESE PCB</td>
+          </tr>
+          <tr v-for="cod in codigos">
+            <td>{{cod.pcbUsb}}</td>
+            <td>{{cod.pcbSata}}</td>
+            <td>{{cod.Fuente}}</td>
+            <td>{{cod.ProbadoPorMi}}</td>
+            <td>{{cod.Observaciones}}</td>
+            <td>{{cod.hddSataQueLlevaElPcb}}</td>
+          </tr>
+        </table>
+        <div v-else class="center">
+          <vue-loader></vue-loader>
+        </div>
+      </div>
+    </center>
+  </body>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script type="module" src="./assets/js/index.js"></script>
+</html>

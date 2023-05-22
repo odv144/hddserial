@@ -1,0 +1,115 @@
+[
+    {
+     "pcbUsb": "G003054A",
+     "pcbSata": "G002825A",
+     "Fuente": "Data-Medics",
+     "ProbadoPorMi": "PERFECTO"
+    },
+    {
+     "pcbUsb": "G003189A",
+     "pcbSata": "G003138A",
+     "Fuente": "Data-Medics",
+     "ProbadoPorMi": "PERFECTO"
+    },
+    {
+     "pcbUsb": "G003250A",
+     "pcbSata": "G003138A",
+     "Fuente": "Data-Medics",
+     "ProbadoPorMi": "PERFECTO"
+    },
+    {
+     "pcbUsb": "G003296A",
+     "pcbSata": "G003138A",
+     "Fuente": "Data-Medics",
+     "ProbadoPorMi": "PERFECTO"
+    },
+    {
+     "pcbUsb": "G003296A",
+     "pcbSata": "G003235C",
+     "Fuente": "Data-Medics",
+     "ProbadoPorMi": "sin probar"
+    },
+    {
+     "pcbUsb": "G003309A",
+     "pcbSata": "G003235B",
+     "Fuente": "Data-Medics",
+     "ProbadoPorMi": "PERFECTO"
+    },
+    {
+     "pcbUsb": "G003309A",
+     "pcbSata": "G003235C",
+     "Fuente": "Data-Medics",
+     "Observaciones": "version C sin comprobar"
+    },
+    {
+     "pcbUsb": "G0034A",
+     "pcbSata": "G4311A",
+     "Fuente": "Data-Medics",
+     "ProbadoPorMi": "PERFECTO"
+    },
+    {
+     "pcbUsb": "G0039A",
+     "pcbSata": "G4311A",
+     "Fuente": "revisar si es correcto",
+     "Observaciones": "no viene en el kit de DFL pero compré disco completo por internet"
+    },
+    {
+     "pcbUsb": "G0090A",
+     "pcbSata": "G0064A",
+     "Fuente": "HDDGURU",
+     "ProbadoPorMi": "PERFECTO",
+     "Observaciones": "tengo esta placa en disco comprado y funcionante",
+     "hddSataQueLlevaElPcb": "MQ04ABB400"
+    },
+    {
+     "pcbUsb": "G0090A",
+     "pcbSata": "G4311A",
+     "Fuente": "Data-Medics"
+    },
+    {
+     "pcbUsb": "G0090A",
+     "pcbSata": "G0064A",
+     "Fuente": "Data-Medics",
+     "ProbadoPorMi": "PERFECTO"
+    },
+    {
+     "pcbUsb": "G3448A",
+     "pcbSata": "G003235B",
+     "Fuente": "Data-Medics",
+     "ProbadoPorMi": "PERFECTO"
+    },
+    {
+     "pcbUsb": "G3448A",
+     "pcbSata": "G003235C",
+     "Fuente": "Data-Medics",
+     "ProbadoPorMi": "PERFECTO"
+    },
+    {
+     "pcbUsb": "G3711A",
+     "pcbSata": "G3235C",
+     "Fuente": "Data-Medics",
+     "ProbadoPorMi": "PERFECTO"
+    },
+    {
+     "pcbUsb": "G3950A",
+     "pcbSata": "G3918A",
+     "Fuente": "foro ruso",
+     "Observaciones": "dudoso"
+    },
+    {
+     "pcbUsb": "G3959A",
+     "pcbSata": "G3918A",
+     "Fuente": "Data-Medics",
+     "ProbadoPorMi": "PERFECTO"
+    },
+    {
+     "pcbUsb": "G4330A",
+     "pcbSata": "G4311A",
+     "Fuente": "Data-Medics",
+     "Observaciones": "G3138A tambien?"
+    },
+    {
+     "pcbUsb": "G4330B",
+     "pcbSata": "XXXXX"
+    }
+   ]
