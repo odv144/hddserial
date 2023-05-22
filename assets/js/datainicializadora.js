@@ -5,5 +5,6 @@ export const initData = {
     codigos:null,
     loader:true,
     search:null,
+    mensajes:false,
     
 };

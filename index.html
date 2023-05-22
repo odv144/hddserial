@@ -21,20 +21,27 @@
         <div v-else class="center">
           <vue-loader></vue-loader>
         </div> -->
-        <hr />
-        <label for="buscar">Buscar:</label>
-        <input type="text" name="buscar" id="txtBuscar" placeholder="Buscar codigos">
-        <button @click="codigoHandler">Traer Datos</button>
-        
-        <table v-if="cogidos!==null">
-          <tr>
-            <td>PCB USB</td>
-            <td>PCB SATA</td>
-            <td>FUENTE</td>
-            <td>PROBADO POR MI</td>
-            <td>OBSERVACIONES</td>
-            <td>HDD QUE LLEVA ESE PCB</td>
-          </tr>
+       
+        <fieldset>
+
+          <label for="buscar">Buscar:</label>
+          <input type="text" name="buscar" id="txtBuscar" placeholder="Buscar codigos">
+          <button @click="codigoHandler">Traer Datos</button>
+          
+        </fieldset>
+          <div v-show="mensaje"> Sin Datos que mostrar</div>
+          <table v-if="codigos!==null"  >
+           <thead>
+             <tr>
+               <td>PCB USB</td>
+               <td>PCB SATA</td>
+               <td>FUENTE</td>
+               <td>PROBADO POR MI</td>
+               <td>OBSERVACIONES</td>
+               <td>HDD QUE LLEVA ESE PCB</td>
+              </tr>
+          </thead> 
+          <tbody class="table">
           <tr v-for="cod in codigos">
             <td>{{cod.pcbUsb}}</td>
             <td>{{cod.pcbSata}}</td>
@@ -44,6 +51,9 @@
             <td>{{cod.hddSataQueLlevaElPcb}}</td>
           </tr>
         </table>
+
+        </tbody>
+        
         <div v-else class="center">
           <vue-loader></vue-loader>
         </div>

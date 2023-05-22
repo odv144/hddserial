@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap");
 
-* {
-    color: white;
-    background-color: #333;
-    font-family: "Titillium Web", sans-serif;
-}
+
 
 body {
     height: 100vh;
+    color: white;
+    background-color: #333;
+    font-family: "Titillium Web", sans-serif;
 }
 
 center {
@@ -110,4 +109,49 @@ fieldset > input {
     100% {
         transform: scale(0);
     }
+}
+
+table{
+    border:2px solid white;
+    background-color: #999;
+    color:black;
+    font-weight: bold;
+    text-align: center;
+}
+table>thead{
+    background-color: #3388aa;
+}
+table>tbody.table>tr:nth-child(even){
+    background-color:#88bbcc;
+}
+table>tbody.table>tr:nth-child(old){
+    background-color: #99bbbb;
+}
+table>tbody.table>tr>td{
+    border:1px solid black;
+    padding:2px;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+}
+fieldset>label{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+fieldset>input{
+    height: 50px;
+}
+fieldset>button{
+    background-color:#0077dd;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    margin:5px;
+}
+img{
+    border-top:15px solid #116699;
+    border-right: 15px solid #116699;
+    border-bottom: 15px solid #446688;
+    border-left: 15px solid #446688;
 }

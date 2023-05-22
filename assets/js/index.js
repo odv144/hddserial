@@ -45,8 +45,16 @@ const core = {
                 const search = document.getElementById("txtBuscar").value;
                 //const search = 'G003296A';
                 cod = cod.filter(c=>c.pcbUsb.startsWith(search.toUpperCase()));
-                this.codigos= cod;
-                console.log(this.codigos);
+                if(cod.pcbUsb === null|| cod==''){
+                    console.log('vacio'+cod);
+                    this.mensaje=true,
+                    this.codigos=null;
+                }else{
+                    
+                    console.log('con datos'+cod);
+                    this.codigos= cod;
+                }
+                
             });
             // .then((cod) => (console.log(typeof(cod))));
         },
