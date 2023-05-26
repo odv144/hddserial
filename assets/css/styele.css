@@ -1,39 +1,122 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap");
-
-
+:root{
+    --fondo:#102a44;
+    --letras:white;
+    --azulVerde:#3388aa;
+    --azul:#0077dd;
+    --lightBlue:#88bbcc;
+    --vibrant:#1177aa;
+    
+}
+*{
+    margin:0;
+    padding: 0;
+}
 
 body {
-    height: 100vh;
+    width:100vw;
     color: white;
-    background-color: #333;
+    background-color:var(--fondo);
     font-family: "Titillium Web", sans-serif;
 }
 
-center {
-    height: 100%;
+main{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-#app > .header {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-#app > .imageHeader {
-    height: 200px;
-}
-
-.center {
-    height: 200px;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: transparent;
+}
+h1{
+    width:100vw;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+div.imagen{
+    width:100vw;
+    text-align: center;
+    margin: 2%;
+}
+div.imagen>img{
+    width: 80vw;
+    
+}
+
+#app{
+    background-color: var(--vibrant);
+    padding: 2%;
+    
+}
+section{
+    margin:2% 0;
+    
+}
+section>p{
+    width: fit-content;
+    font-size: 1rem;
+    text-align: center;
+    color:var(white);
+    font-weight: bold;
+    margin:2% 0%;
+}
+
+div.field1{
+    
+    border-top:2px solid var(--lightBlue);
+    border-right: 2px solid var(--lightBlue);
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    padding:2%;
+    
+}
+div.field1>label{
+    color:black;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 2%;
+}
+
+div.field1>input{
+    background-color: var(--fondo);
+    color:white;
+    font-weight: bold;
+}
+div.field1>p{
+    font-size: 1rem;
+    color:black;
+    font-weight: 900;
+}
+button{
+    margin:5%;
+    padding:2%;
+    border:2px solid var(--lightBlue);
+    background-color: var(--azul);
+    border-radius: 20px;
+    min-width: 150px;
+   
+}
+
+table{
+    
+    font-size: 1rem;
+    border:1px solid black;
+}
+table tr{
+    display:flex;
+    flex-direction: column;
+    border:2px solid rgb(10, 8, 73);
+    padding: 2%;
+}
+
+table>thead{
+    display:none;
+}
+table tbody tr td[data-titulo]{
+    display:flex;
+}
+table tbody tr td[data-titulo]::before{
+    content: attr( data-titulo);
+    width:80px;
 }
 .wave {
     width: 1px;
@@ -71,6 +154,39 @@ center {
 .wave:nth-child(10) {
     animation-delay: 0.9s;
 }
+.center {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+
+@keyframes wave {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+/* #app > .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#app > .imageHeader {
+    height: 200px;
+}
+
+
 
 fieldset {
     display: inline-grid;
@@ -99,17 +215,6 @@ fieldset > input {
     border: 1px solid #999;
 }
 
-@keyframes wave {
-    0% {
-        transform: scale(0);
-    }
-    50% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0);
-    }
-}
 
 table{
     border:2px solid white;
@@ -131,6 +236,17 @@ table>tbody.table>tr>td{
     border:1px solid black;
     padding:2px;
 }
+
+.contenedor{
+    display:flex;
+    flex-direction: row;
+}
+.contenedor>div{
+    width:45%;
+    display: flex;
+    flex-direction: column;
+}
+
 fieldset{
     display: flex;
     flex-direction: column;
@@ -155,3 +271,23 @@ img{
     border-bottom: 15px solid #446688;
     border-left: 15px solid #446688;
 }
+
+
+.field1{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.field1>label{
+    margin:5%;
+    display: block;
+    width:100%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.field1>input{
+    display:block;
+    height: 30px;
+    
+} */

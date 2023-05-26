@@ -31,12 +31,6 @@ const core = {
         },
     },
     methods:{
-        // codigoHandler: function(){
-        //     fetch(LOCAL_API_URL)
-        //     .then((res) => res.json())
-        //     .then((cod) => (this.codigos=cod));
-        // },
-        //hasta aca andaba
         codigoHandler: function(){
             fetch(LOCAL_API_URL)
             .then((res) => res.json())
@@ -57,6 +51,25 @@ const core = {
                 
             });
             // .then((cod) => (console.log(typeof(cod))));
+        },
+        familiaHandler: function(){
+            fetch('https://sheetdb.io/api/v1/7lsrl0ziy52lf')
+            .then((response)=> response.json())
+            .then((data)=> {
+                const search = document.getElementById("txtBuscarF").value;
+                let codigo;
+                let codLimpio;
+                if (search.length>6){
+                    codigo=search.split("-");
+                    codLimpio = codigo[1].substring(2,5);
+                }else{
+                    codLimpio = search.substring(2,5);
+                } 
+                
+                this.familia=data.filter(c=>c.codigo.toUpperCase() == codLimpio.toUpperCase());
+                
+                
+            });
         },
     },
 
