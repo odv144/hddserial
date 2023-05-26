@@ -31,8 +31,10 @@
                 placeholder="Buscar Familia de Disco WD"
               />
               <p>(puedes poner solo el Short Model "-001CA0")</p>
+              <div class="boton">
+                <button @click="familiaHandler">Buscar</button>
+              </div>
               
-              <button @click="familiaHandler">Buscar</button>
               <div v-if="familia !== null">
 
                 <h3>Familia del Modelo:</h3>
@@ -60,7 +62,9 @@
             id="txtBuscar"
             placeholder="Buscar codigos"
             />
-            <button @click="codigoHandler">Traer Datos</button>
+            <div class="boton">
+              <button @click="codigoHandler">Traer Datos</button>
+            </div>
        
             
             <div v-show="mensaje">Sin Datos que mostrar</div>

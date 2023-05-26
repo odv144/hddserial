@@ -1,293 +1,303 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap");
-:root{
-    --fondo:#102a44;
-    --letras:white;
-    --azulVerde:#3388aa;
-    --azul:#0077dd;
-    --lightBlue:#88bbcc;
-    --vibrant:#1177aa;
-    
+:root {
+  --fondo: #102a44;
+  --letras: white;
+  --azulVerde: #3388aa;
+  --azul: #0077dd;
+  --lightBlue: #88bbcc;
+  --vibrant: #1177aa;
 }
-*{
-    margin:0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    width:100vw;
-    color: white;
-    background-color:var(--fondo);
-    font-family: "Titillium Web", sans-serif;
+  width: 100vw;
+  color: white;
+  background-color: var(--fondo);
+  font-family: "Titillium Web", sans-serif;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-h1{
-    width:100vw;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-style: italic;
-    text-align: center;
+h1 {
+  width: 100vw;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
 }
-div.imagen{
-    width:100vw;
-    text-align: center;
-    margin: 2%;
+div.imagen {
+  width: 100vw;
+  text-align: center;
+  margin: 2%;
 }
-div.imagen>img{
-    width: 80vw;
-    
-}
-
-#app{
-    background-color: var(--vibrant);
-    padding: 2%;
-    
-}
-section{
-    margin:2% 0;
-    
-}
-section>p{
-    width: fit-content;
-    font-size: 1rem;
-    text-align: center;
-    color:var(white);
-    font-weight: bold;
-    margin:2% 0%;
+div.imagen > img {
+  width: 80vw;
 }
 
-div.field1{
-    
-    border-top:2px solid var(--lightBlue);
-    border-right: 2px solid var(--lightBlue);
-    border-bottom: 2px solid black;
-    border-left: 2px solid black;
-    padding:2%;
-    
+#app {
+  background-color: var(--vibrant);
+  padding: 2%;
 }
-div.field1>label{
-    color:black;
-    font-size: 1rem;
-    font-weight: bold;
-    margin-right: 2%;
+section {
+  margin: 2% 0;
 }
-
-div.field1>input{
-    background-color: var(--fondo);
-    color:white;
-    font-weight: bold;
-}
-div.field1>p{
-    font-size: 1rem;
-    color:black;
-    font-weight: 900;
-}
-button{
-    margin:5%;
-    padding:2%;
-    border:2px solid var(--lightBlue);
-    background-color: var(--azul);
-    border-radius: 20px;
-    min-width: 150px;
-   
+section > p {
+  width: fit-content;
+  font-size: 1rem;
+  text-align: center;
+  color: var(white);
+  font-weight: bold;
+  margin: 2% 0%;
 }
 
-table{
-    
-    font-size: 1rem;
-    border:1px solid black;
+div.field1 {
+  border-top: 2px solid var(--lightBlue);
+  border-right: 2px solid var(--lightBlue);
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  padding: 2%;
 }
-table tr{
-    display:flex;
-    flex-direction: column;
-    border:2px solid rgb(10, 8, 73);
-    padding: 2%;
+div.field1 > label {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 2%;
 }
 
-table>thead{
-    display:none;
+div.field1 > input {
+  background-color: var(--fondo);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 5px;
 }
-table tbody tr td[data-titulo]{
-    display:flex;
+div.field1 > p {
+  font-size: 1rem;
+  color: black;
+  font-weight: 900;
 }
-table tbody tr td[data-titulo]::before{
-    content: attr( data-titulo);
-    width:80px;
+div.boton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+button {
+  margin: 5%;
+  padding: 2%;
+  border: 2px solid var(--lightBlue);
+  background-color: var(--azul);
+  border-radius: 20px;
+  min-width: 150px;
+}
+
+table {
+  font-size: 1rem;
+  border: 1px solid black;
+}
+table tr {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(10, 8, 73);
+  padding: 2%;
+}
+
+table > thead {
+  display: none;
+}
+table tbody tr td[data-titulo] {
+  display: flex;
+}
+table tbody tr td[data-titulo]::before {
+  content: attr(data-titulo);
+  width: 80px;
 }
 .wave {
-    width: 1px;
-    height: 50px;
-    background: linear-gradient(60deg, purple, #fff);
-    margin: 10px;
-    animation: wave 1s linear infinite;
-    border-radius: 30px;
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(60deg, purple, #fff);
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 30px;
 }
 
 .wave:nth-child(2) {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 .wave:nth-child(3) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .wave:nth-child(4) {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 .wave:nth-child(5) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .wave:nth-child(6) {
-    animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 .wave:nth-child(7) {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .wave:nth-child(8) {
-    animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 .wave:nth-child(9) {
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 .wave:nth-child(10) {
-    animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 .center {
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
 }
-
 
 @keyframes wave {
-    0% {
-        transform: scale(0);
-    }
-    50% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0);
-    }
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
 
-/* #app > .header {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+/* reglas para la parte desktop */
+@media (min-width: 400px) {
+  * {
+		margin: 0;
+		padding: 0;
+	}
+	html{
+		width: 100vw;
+		
+	}
+	body {
+		width: 100vw;
+		color: white;
+		background-color: var(--fondo);
+		font-family: "Titillium Web", sans-serif;
+	}
+	
+	main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	h1 {
+		width: 100vw;
+		margin-top: 5%;
+		font-size: 2rem;
+		font-weight: bold;
+		font-style: italic;
+		text-align: center;
+	}
+	div.imagen {
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+	}
+	div.imagen > img {
+		width: 50%;
+	}
+	
+	#app {
+		background-color: var(--vibrant);
+		width:100%;
+		padding:0;
+		margin: 0;
+	}
+	section {
+		width: 100%;
+		margin: 2% 0;
+	}
+	section > p {
+		width: fit-content;
+		font-size: 1rem;
+		text-align: center;
+		color: var(white);
+		font-weight: bold;
+		margin: 2% 0%;
+	}
+	
+	div.field1 {
+		border-top: 2px solid var(--lightBlue);
+		border-right: 2px solid var(--lightBlue);
+		border-bottom: 2px solid black;
+		border-left: 2px solid black;
+		padding: 2%;
+	}
+	div.field1 > label {
+		color: black;
+		font-size: 1rem;
+		font-weight: bold;
+		margin-right: 2%;
+	}
+	
+	div.field1 > input {
+		background-color: var(--fondo);
+		color: white;
+		font-weight: bold;
+		font-size: 1rem;
+		padding: 5px;
+	}
+	div.field1 > p {
+		font-size: 1rem;
+		color: black;
+		font-weight: 900;
+	}
+	div.boton {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	button {
+		margin: 5%;
+		padding: 2%;
+		border: 2px solid var(--lightBlue);
+		background-color: var(--azul);
+		border-radius: 20px;
+		min-width: 150px;
+	}
+	
+	table {
+		font-size: 1rem;
+		border: 1px solid black;
+	}
+	table tr {
+		display: flex;
+		flex-direction: column;
+		border: 2px solid rgb(10, 8, 73);
+		padding: 2%;
+	}
+	
+	table > thead {
+		display: none;
+	}
+	table tbody tr td[data-titulo] {
+		display: flex;
+	}
+	table tbody tr td[data-titulo]::before {
+		content: attr(data-titulo);
+		width: 80px;
+	}
+	.wave {
+		width: 1px;
+		height: 50px;
+		background: linear-gradient(60deg, purple, #fff);
+		margin: 10px;
+		animation: wave 1s linear infinite;
+		border-radius: 30px;
+	}
 }
-
-#app > .imageHeader {
-    height: 200px;
-}
-
-
-
-fieldset {
-    display: inline-grid;
-    height: 100px;
-    grid-template-columns: 1fr 2fr;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-}
-
-fieldset > input {
-    height: 50px;
-}
-
-.wizards {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    gap: 10px;
-    padding: 10px;
-    font-size: 12px;
-}
-
-.wizards > div {
-    border-radius: 20px;
-    border: 1px solid #999;
-}
-
-
-table{
-    border:2px solid white;
-    background-color: #999;
-    color:black;
-    font-weight: bold;
-    text-align: center;
-}
-table>thead{
-    background-color: #3388aa;
-}
-table>tbody.table>tr:nth-child(even){
-    background-color:#88bbcc;
-}
-table>tbody.table>tr:nth-child(old){
-    background-color: #99bbbb;
-}
-table>tbody.table>tr>td{
-    border:1px solid black;
-    padding:2px;
-}
-
-.contenedor{
-    display:flex;
-    flex-direction: row;
-}
-.contenedor>div{
-    width:45%;
-    display: flex;
-    flex-direction: column;
-}
-
-fieldset{
-    display: flex;
-    flex-direction: column;
-}
-fieldset>label{
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-fieldset>input{
-    height: 50px;
-}
-fieldset>button{
-    background-color:#0077dd;
-    font-size: 1rem;
-    font-weight: bold;
-    font-style: italic;
-    margin:5px;
-}
-img{
-    border-top:15px solid #116699;
-    border-right: 15px solid #116699;
-    border-bottom: 15px solid #446688;
-    border-left: 15px solid #446688;
-}
-
-
-.field1{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-.field1>label{
-    margin:5%;
-    display: block;
-    width:100%;
-    font-size: 1rem;
-    font-weight: bold;
-}
-.field1>input{
-    display:block;
-    height: 30px;
-    
-} */
