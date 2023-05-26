@@ -7,223 +7,238 @@
   --lightBlue: #88bbcc;
   --vibrant: #1177aa;
 }
-* {
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  width: 100vw;
-  color: white;
-  background-color: var(--fondo);
-  font-family: "Titillium Web", sans-serif;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-h1 {
-  width: 100vw;
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-style: italic;
-  text-align: center;
-}
-div.imagen {
-  width: 100vw;
-  text-align: center;
-  margin: 2%;
-}
-div.imagen > img {
-  width: 80vw;
-}
-
-#app {
-  background-color: var(--vibrant);
-  padding: 2%;
-}
-section {
-  margin: 2% 0;
-}
-section > p {
-  width: fit-content;
-  font-size: 1rem;
-  text-align: center;
-  color: var(white);
-  font-weight: bold;
-  margin: 2% 0%;
-}
-
-div.field1 {
-  border-top: 2px solid var(--lightBlue);
-  border-right: 2px solid var(--lightBlue);
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  padding: 2%;
-}
-div.field1 > label {
-  color: black;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-right: 2%;
-}
-
-div.field1 > input {
-  background-color: var(--fondo);
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 5px;
-}
-div.field1 > p {
-  font-size: 1rem;
-  color: black;
-  font-weight: 900;
-}
-div.boton {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-button {
-  margin: 5%;
-  padding: 2%;
-  border: 2px solid var(--lightBlue);
-  background-color: var(--azul);
-  border-radius: 20px;
-  min-width: 150px;
-}
-
-table {
-  font-size: 1rem;
-  border: 1px solid black;
-}
-table tr {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid rgb(10, 8, 73);
-  padding: 2%;
-}
-
-table > thead {
-  display: none;
-}
-table tbody tr td[data-titulo] {
-  display: flex;
-}
-table tbody tr td[data-titulo]::before {
-  content: attr(data-titulo);
-  width: 80px;
-}
 .wave {
-  width: 1px;
-  height: 50px;
-  background: linear-gradient(60deg, purple, #fff);
-  margin: 10px;
-  animation: wave 1s linear infinite;
-  border-radius: 30px;
+	width: 1px;
+	height: 50px;
+	background: linear-gradient(60deg, purple, #fff);
+	margin: 10px;
+	animation: wave 1s linear infinite;
+	border-radius: 30px;
+  }
+  
+  .wave:nth-child(2) {
+	animation-delay: 0.1s;
+  }
+  .wave:nth-child(3) {
+	animation-delay: 0.2s;
+  }
+  .wave:nth-child(4) {
+	animation-delay: 0.3s;
+  }
+  .wave:nth-child(5) {
+	animation-delay: 0.4s;
+  }
+  .wave:nth-child(6) {
+	animation-delay: 0.5s;
+  }
+  .wave:nth-child(7) {
+	animation-delay: 0.6s;
+  }
+  .wave:nth-child(8) {
+	animation-delay: 0.7s;
+  }
+  .wave:nth-child(9) {
+	animation-delay: 0.8s;
+  }
+  .wave:nth-child(10) {
+	animation-delay: 0.9s;
+  }
+  .center {
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+  }
+  
+  @keyframes wave {
+	0% {
+	  transform: scale(0);
+	}
+	50% {
+	  transform: scale(1);
+	}
+	100% {
+	  transform: scale(0);
+	}
+  }
+
+@media(max-width:399px){
+	* {
+		margin: 0;
+		padding: 0;
+	  }
+	  
+	  body {
+		width: 100vw;
+		color: white;
+		background-color: var(--fondo);
+		font-family: "Titillium Web", sans-serif;
+	  }
+	  
+	  main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	  }
+	  h1 {
+		width: 100vw;
+		font-size: 1.5rem;
+		font-weight: bold;
+		font-style: italic;
+		text-align: center;
+	  }
+	  div.imagen {
+		width: 100vw;
+		text-align: center;
+		margin: 2%;
+	  }
+	  div.imagen > img {
+		width: 80vw;
+	  }
+	  
+	  #app {
+		background-color: var(--vibrant);
+		padding: 5%;
+	  }
+	  section {
+		margin: 2%;
+	   padding:2%;
+	   border-top: 2px solid var(--lightBlue);
+		border-right: 2px solid var(--lightBlue);
+		border-bottom: 2px solid black;
+		border-left: 2px solid black;
+	  }
+	  section > p {
+		width: fit-content;
+		font-size: 1rem;
+		text-align: center;
+		color: var(white);
+		font-weight: bold;
+		margin: 2% 0%;
+	  }
+	  
+	  div.field1 {
+		
+		padding: 2%;
+	  }
+	  div.field1 > label {
+		color: black;
+		font-size: 1rem;
+		font-weight: bold;
+		margin-right: 2%;
+	  }
+	  
+	  div.field1 > input {
+		background-color: var(--fondo);
+		color: white;
+		font-weight: bold;
+		font-size: 1rem;
+		padding: 5px;
+	  }
+	  div.field1 > p {
+		font-size: 1rem;
+		color: black;
+		font-weight: 900;
+	  }
+	  div.boton {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	  }
+	  button {
+		margin: 5%;
+		padding: 2%;
+		border: 2px solid var(--lightBlue);
+		background-color: var(--azul);
+		border-radius: 20px;
+		min-width: 150px;
+	  }
+	  
+	  table {
+		font-size: 1rem;
+		border: 1px solid black;
+	  }
+	  table tr {
+		display: flex;
+		flex-direction: column;
+		border: 2px solid rgb(10, 8, 73);
+		padding: 2%;
+	  }
+	  
+	  table > thead {
+		display: none;
+	  }
+	  table tbody tr td[data-titulo] {
+		display: flex;
+	  }
+	  table tbody tr td[data-titulo]::before {
+		content: attr(data-titulo);
+		width: 80px;
+	  }
+
 }
 
-.wave:nth-child(2) {
-  animation-delay: 0.1s;
-}
-.wave:nth-child(3) {
-  animation-delay: 0.2s;
-}
-.wave:nth-child(4) {
-  animation-delay: 0.3s;
-}
-.wave:nth-child(5) {
-  animation-delay: 0.4s;
-}
-.wave:nth-child(6) {
-  animation-delay: 0.5s;
-}
-.wave:nth-child(7) {
-  animation-delay: 0.6s;
-}
-.wave:nth-child(8) {
-  animation-delay: 0.7s;
-}
-.wave:nth-child(9) {
-  animation-delay: 0.8s;
-}
-.wave:nth-child(10) {
-  animation-delay: 0.9s;
-}
-.center {
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-}
-
-@keyframes wave {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
 
 /* reglas para la parte desktop */
 @media (min-width: 400px) {
-  * {
-		margin: 0;
-		padding: 0;
-	}
-	html{
-		width: 100vw;
-		
-	}
+  *{
+	margin:0px;
+	margin-top: 0px;
+	
+  }
 	body {
-		width: 100vw;
+		
 		color: white;
 		background-color: var(--fondo);
 		font-family: "Titillium Web", sans-serif;
 	}
 	
 	main {
+
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: center; 
+		
 	}
 	h1 {
-		width: 100vw;
+		
 		margin-top: 5%;
 		font-size: 2rem;
 		font-weight: bold;
 		font-style: italic;
 		text-align: center;
 	}
+
 	div.imagen {
-		width: 100vw;
+		width:100%;
 		display: flex;
 		justify-content: center;
+		margin:2% 0 2% 0;
 	}
 	div.imagen > img {
 		width: 50%;
 	}
 	
 	#app {
-		background-color: var(--vibrant);
-		width:100%;
-		padding:0;
-		margin: 0;
-	}
-	section {
 		width: 100%;
+		background-color: var(--vibrant);
+		display:flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	#app>section {
+		display:flex;
+		justify-content: space-evenly;
 		margin: 2% 0;
+		border-top: 2px solid var(--lightBlue);
+		border-right: 2px solid var(--lightBlue);
+		border-bottom: 2px solid black;
+		border-left: 2px solid black;
 	}
 	section > p {
-		width: fit-content;
+		width:40%;
 		font-size: 1rem;
 		text-align: center;
 		color: var(white);
@@ -232,10 +247,7 @@ table tbody tr td[data-titulo]::before {
 	}
 	
 	div.field1 {
-		border-top: 2px solid var(--lightBlue);
-		border-right: 2px solid var(--lightBlue);
-		border-bottom: 2px solid black;
-		border-left: 2px solid black;
+		
 		padding: 2%;
 	}
 	div.field1 > label {
@@ -251,6 +263,7 @@ table tbody tr td[data-titulo]::before {
 		font-weight: bold;
 		font-size: 1rem;
 		padding: 5px;
+		margin: 0 2%;
 	}
 	div.field1 > p {
 		font-size: 1rem;
@@ -258,46 +271,43 @@ table tbody tr td[data-titulo]::before {
 		font-weight: 900;
 	}
 	div.boton {
-		width: 100%;
 		display: flex;
 		justify-content: center;
+		display: inline-block;
 	}
 	button {
-		margin: 5%;
-		padding: 2%;
+		padding: 1% 2%;
+		margin: 0 1%;
 		border: 2px solid var(--lightBlue);
 		background-color: var(--azul);
 		border-radius: 20px;
 		min-width: 150px;
 	}
 	
-	table {
-		font-size: 1rem;
-		border: 1px solid black;
+	section>div.field2{
+		width:98vw;
+		padding: 0;
+
 	}
-	table tr {
-		display: flex;
-		flex-direction: column;
-		border: 2px solid rgb(10, 8, 73);
+	table {
+		padding:0;
+		width:100%;
+		font-size: 1rem;
+		border: 2px solid rgb(255, 255, 255);
+	}
+	tbody.table>tr {
+		background-color:var(--fondo);
+		border: 2px solid rgb(255, 255, 255);
 		padding: 2%;
 	}
+	table tr td{
+		padding: 0 1%;
+		font-weight: bold;
+	}
+	table thead tr{
+		background-color: var(--azul);
+	}
 	
-	table > thead {
-		display: none;
-	}
-	table tbody tr td[data-titulo] {
-		display: flex;
-	}
-	table tbody tr td[data-titulo]::before {
-		content: attr(data-titulo);
-		width: 80px;
-	}
-	.wave {
-		width: 1px;
-		height: 50px;
-		background: linear-gradient(60deg, purple, #fff);
-		margin: 10px;
-		animation: wave 1s linear infinite;
-		border-radius: 30px;
-	}
+	
+	
 }
