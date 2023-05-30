@@ -8,6 +8,9 @@
     <title>Labs4 Recovery</title>
   </head>
   <body>
+    <header>
+        <a href="./assets/pages/admin.html">Admin</a>
+    </header>
     <main>
       <h1>Buscador de compatibilidad</h1>
       <div class="imagen">
@@ -15,86 +18,94 @@
       </div>
       <div id="app">
         <section>
-       
-            <p>WD Marvel Family Identifier <br/>
-              (Auth. Data-Medics)<br/>            
-              Introduce el modelo completo, incluido el guion y resto de dato<br/>
+          <p></p>
+            WD Marvel Family Identifier <br />
+            (Auth. Data-Medics)<br />
+            Introduce el modelo completo, incluido el guion y resto de dato<br />
             E.G. WD5000AAKX-001CA0
           </p>
 
-            <div class="field1">
-              <label for="buscarF">Modelo:</label>
-              <input
-                type="text"
-                name="buscarF"
-                id="txtBuscarF"
-                placeholder="Buscar Familia de Disco WD"
-              />
-              <p>(puedes poner solo el Short Model "-001CA0")</p>
-              <div class="boton">
-                <button @click="familiaHandler">Buscar</button>
-              </div>
-              
-              <div v-if="familia !== null">
-
-                <h3>Familia del Modelo:</h3>
-                <h3 v-for="fam in familia">
-                  <p>Modelo: {{fam.modelo}}</p>
-                  <p>Detalle:{{fam.detalle}} </p>
-                  
-                </h3>
-              </div>
-              <div v-else class="center">
-                <vue-loader></vue-loader>
-              </div>
+          <div class="field1">
+            <label for="buscarF">Modelo:</label>
+            <input
+              type="text"
+              name="buscarF"
+              id="txtBuscarF"
+              placeholder="Buscar Familia de Disco WD"
+            />
+            <p>(puedes poner solo el Short Model "-001CA0")</p>
+            <div class="boton">
+              <button @click="familiaHandler">Buscar</button>
             </div>
 
-
+            <div v-if="familia !== null">
+              <h3>Familia del Modelo:</h3>
+              <h3 v-for="fam in familia">
+                <p>Modelo: {{fam.modelo}}</p>
+                <p>Detalle:{{fam.detalle}}</p>
+              </h3>
+            </div>
+            <div v-if="familia==''">
+              <p>
+                No tenemos una respuesta para este código, envianos un emial a
+                soluciones@labs4recovery.com para solicitar mayor información
+              </p>
+            </div>
+            <div v-else class="center">
+              <vue-loader></vue-loader>
+            </div>
+          </div>
         </section>
 
         <section>
           <div class="field1 field2">
-
+            
             <label for="buscar">Buscar:</label>
             <input
-            type="text"
-            name="buscar"
-            id="txtBuscar"
-            placeholder="Buscar codigos"
+              type="text"
+              name="buscar"
+              id="txtBuscar"
+              placeholder="Buscar codigos"
             />
             <div class="boton">
               <button @click="codigoHandler">Traer Datos</button>
             </div>
-       
-            
-            <div v-show="mensaje">Sin Datos que mostrar</div>
-          <table v-if="codigos!==null">
-            <thead>
-              <tr>
-                <td>PCB USB</td>
-                <td>PCB SATA</td>
-                <td>FUENTE</td>
-                <td>PROBADO POR MI</td>
-                <td>OBSERVACIONES</td>
-                <td>HDD CON ESE PCB</td>
-              </tr>
-            </thead>
-            <tbody class="table">
-              <tr v-for="cod in codigos">
-                <td data-titulo="Pcb Usb:">{{cod.pcbUsb}}</td>
-                <td data-titulo="Pcb Sata:">{{cod.pcbSata}}</td>
-                <td data-titulo="Fuente:">{{cod.Fuente}}</td>
-                <td data-titulo="Probado:">{{cod.ProbadoPorMi}}</td>
-                <td data-titulo="Obs:">{{cod.Observaciones}}</td>
-                <td data-titulo="Hdd con PCB:">{{cod.hddSataQueLlevaElPcb}}</td>
-              </tr>
-            </tbody>
-          </table>
 
-          <div v-else class="center">
-            <vue-loader></vue-loader>
-          </div>
-        </div>
+            
+            <table v-if="codigos!==null">
+              <thead>
+                <tr>
+                  <td>PCB USB</td>
+                  <td>PCB SATA</td>
+                  <td>FUENTE</td>
+                  <td>PROBADO POR MI</td>
+                  <td>OBSERVACIONES</td>
+                  <td>HDD CON ESE PCB</td>
+                </tr>
+              </thead>
+              <tbody class="table">
+                <tr v-for="cod in codigos">
+                  <td data-titulo="Pcb Usb:">{{cod.pcbUsb}}</td>
+                  <td data-titulo="Pcb Sata:">{{cod.pcbSata}}</td>
+                  <td data-titulo="Fuente:">{{cod.Fuente}}</td>
+                  <td data-titulo="Probado:">{{cod.ProbadoPorMi}}</td>
+                  <td data-titulo="Obs:">{{cod.Observaciones}}</td>
+                  <td data-titulo="Hdd con PCB:">
+                    {{cod.hddSataQueLlevaElPcb}}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          
+                <div v-else class="center">
+                  <div v-if="mensajes!=''">
+                    <p>{{mensajes}}</p>
+                  </div>
+                  
+                  <vue-loader v-else></vue-loader>
+                </div>
+            </div>
+         
         </section>
       </div>
     </main>

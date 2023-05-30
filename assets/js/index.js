@@ -40,12 +40,13 @@ const core = {
                 //const search = 'G003296A';
                 cod = cod.filter(c=>c.pcbUsb.startsWith(search.toUpperCase()));
                 if(cod.pcbUsb === null|| cod==''){
-                    console.log('vacio'+cod);
-                    this.mensaje=true,
+                    // this.mensaje=true,
+                    this.mensajes='No tenemos una respuesta para este código, envianos un emial a soluciones@labs4recovery.com para solicitar mayor información';
                     this.codigos=null;
+                    console.log('vacio'+cod+"codigo"+this.mensajes);
                 }else{
-                    
                     console.log('con datos'+cod);
+                    this.mensajes=false;
                     this.codigos= cod;
                 }
                 

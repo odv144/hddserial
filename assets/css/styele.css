@@ -7,7 +7,11 @@
   --lightBlue: #88bbcc;
   --vibrant: #1177aa;
 }
-
+a{
+	text-decoration: none;
+	color:white;
+	font-size: 2rem;
+}
 .wave {
 	width: 1px;
 	height: 50px;

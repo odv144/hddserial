@@ -108,6 +108,12 @@
      "Fuente": "Data-Medics",
      "Observaciones": "G3138A tambien?"
     },
+	{
+     "pcbUsb": "G64330A",
+     "pcbSata": "G4311A",
+     "Fuente": "Data-Medics",
+     "Observaciones": "G3138A tambien?"
+    },
     {
      "pcbUsb": "G4330B",
      "pcbSata": "XXXXX"
