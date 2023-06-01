@@ -79,14 +79,13 @@ a{
 		color: white;
 		background-color: var(--fondo);
 		font-family: "Titillium Web", sans-serif;
-		display:flex;
-		justify-content: center;
-		vertical-align: middle;
+		
 		
 	  }
 	  
 	  main {
 		display: flex;
+		margin-top: 5%;
 		flex-direction: column;
 		justify-content: center;
 		vertical-align: middle;
@@ -190,7 +189,7 @@ a{
 
 }
 
-
+/*/////////////////////////////////////////////////////////////////*/
 /* reglas para la parte desktop */
 @media (min-width: 400px) {
   *{
@@ -214,11 +213,17 @@ a{
 	}
 	h1 {
 		
-		margin-top: 5%;
+		margin: 2%;
 		font-size: 2rem;
 		font-weight: bold;
 		font-style: italic;
 		text-align: center;
+	}
+	P{
+		margin: 1% 2%;
+		font-size:1.1rem;
+		
+
 	}
 
 	div.imagen {
