@@ -10,7 +10,7 @@
 a{
 	text-decoration: none;
 	color:white;
-	font-size: 2rem;
+	font-size: 1rem;
 }
 .wave {
 	width: 1px;
@@ -79,12 +79,18 @@ a{
 		color: white;
 		background-color: var(--fondo);
 		font-family: "Titillium Web", sans-serif;
+		display:flex;
+		justify-content: center;
+		vertical-align: middle;
+		
 	  }
 	  
 	  main {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		vertical-align: middle;
+		text-align: center;
 	  }
 	  h1 {
 		width: 100vw;
@@ -152,8 +158,8 @@ a{
 		justify-content: center;
 	  }
 	  button {
-		margin: 5%;
-		padding: 2%;
+		margin: 2%;
+		padding: 1%;
 		border: 2px solid var(--lightBlue);
 		background-color: var(--azul);
 		border-radius: 20px;
@@ -277,7 +283,7 @@ a{
 	div.boton {
 		display: flex;
 		justify-content: center;
-		display: inline-block;
+		
 	}
 	button {
 		padding: 1% 2%;

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styele.css" />
+    <title>Labs4 Recovery</title>
+  </head>
+  <body>
+      <main>
+        <h1>IDENTIFICADOR DE FAMILIA PARA DISCOS WD</h1>
+      <div class="imagen">
+        <img src="/assets/img/logo.png" alt="" />
+      </div>
+      <div  class="boton">
+        <button><a href="../../index.html">Home</a></button>
+        <button><a href="/assets/pages/codigo.html">Codigo Equivalencia Toshiba</a></button>
+      </div>
+      <div id="app">
+        <section>
+         <p>
+          WD Marvel Family Identifier <br />
+            Introduce el modelo completo, MDL, Ejemplo: WD5000AAKX-001CA0 <br />
+			O pon solo los ultimos 6 digitos del MDL "001CA0"
+          </p>
+
+          <div class="field1">
+            <label for="buscarF">Modelo:</label>
+            <input
+              type="text"
+              name="buscarF"
+              id="txtBuscarF"
+              placeholder="Buscar Familia de Disco WD"
+            />
+            <p>(puedes poner solo el Short Model "-001CA0")</p>
+            <div class="boton">
+              <button @click="familiaHandler">Buscar</button>
+            </div>
+
+            <div v-if="familia !== null">
+              <h3>Familia del Modelo:</h3>
+              <h3 v-for="fam in familia">
+                <p>Modelo: {{fam.modelo}}</p>
+                <p>Detalle:{{fam.detalle}}</p>
+              </h3>
+            </div>
+            <div v-if="familia==''">
+              <p>
+                No tenemos una respuesta para este código, envianos un emial a
+                soluciones@labs4recovery.com para solicitar mayor información
+              </p>
+            </div>
+            <div v-else class="center">
+              <vue-loader></vue-loader>
+            </div>
+          </div>
+        </section>
+
+      
+      </div>
+    </main>
+  </body>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script type="module" src="/assets/js/index.js"></script>
+</html>

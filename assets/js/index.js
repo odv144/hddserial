@@ -4,7 +4,7 @@ import { tarjeta } from "./component.js";
 import { initData } from "./datainicializadora.js";
 import { loader } from "./loader.js";
 
-const LOCAL_API_URL = "./assets/bd/bd.json";
+const LOCAL_API_URL = "/assets/bd/bd.json";
 
 const {createApp}=Vue;
 const idApp="app";
