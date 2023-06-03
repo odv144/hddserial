@@ -24,10 +24,11 @@
    
       <div id="app">
           <section>
-          <div class="field1 field2">
-             
-            <label for="buscar">Buscar:</label>
-            <input
+          <div class="field2">
+             <div class="buscador">
+
+               <label for="buscar">Buscar:</label>
+               <input
               type="text"
               name="buscar"
               id="txtBuscar"
@@ -36,6 +37,7 @@
             <div class="boton">
               <button @click="codigoHandler">Traer Datos</button>
             </div>
+          </div>
 
             
             <table v-if="codigos!==null">

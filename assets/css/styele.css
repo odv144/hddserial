@@ -152,18 +152,18 @@ a{
 		margin: 2% 0%;
 	  }
 	  
-	  div.field1 {
+	  div.field1, .buscador {
 		margin:2%;
 		padding: 2%;
 	  }
-	  div.field1 > label {
+	  div.field1 > label, .buscador > label {
 		color: white;
 		font-size: 1rem;
 		font-weight: bold;
 		margin-right: 2%;
 	  }
 	  
-	  div.field1 > input {
+	  div.field1 > input, .buscador>input {
 		background-color: var(--fondoInput);
 		color:var(--titulo);
 		font-weight: bold;
@@ -171,7 +171,7 @@ a{
 		padding: 5px;
 	  }
 
-	  div.field1 > p {
+	  div.field1 > p, .buscador>p{
 		font-size: 1rem;
 		color: black;
 		font-weight: 900;
@@ -290,7 +290,7 @@ a{
 	
 	#app {
 		width: 100%;
-		background-color: var(--vibrant);
+		
 		display:flex;
 		justify-content: center;
 		flex-direction: column;
@@ -298,11 +298,8 @@ a{
 	#app>section {
 		display:flex;
 		justify-content: space-evenly;
-		margin: 2% 0;
-		border-top: 2px solid var(--lightBlue);
-		border-right: 2px solid var(--lightBlue);
-		border-bottom: 2px solid black;
-		border-left: 2px solid black;
+		padding: 2%;
+
 	}
 	section > p {
 		width:40%;
@@ -312,27 +309,30 @@ a{
 		font-weight: bold;
 		margin: 2% 0%;
 	}
-	
-	div.field1 {
-		
+	.buscador{
+		display: flex;
+		flex-direction: row;	
+	}
+	div.field1, div.buscador {
+		margin:2%;
 		padding: 2%;
 	}
-	div.field1 > label {
-		color: black;
+	div.field1 > label,div.buscador > label {
+		color: rgb(255, 255, 255);
 		font-size: 1rem;
 		font-weight: bold;
 		margin-right: 2%;
 	}
 	
-	div.field1 > input {
-		background-color: var(--fondo);
-		color: white;
+	div.field1 > input, div.buscador > input {
+		background-color: var(--fondoInput);
+		color:var(--titulo);
 		font-weight: bold;
 		font-size: 1rem;
 		padding: 5px;
 		margin: 0 2%;
 	}
-	div.field1 > p {
+	div.field1 > p, div.buscador > p {
 		font-size: 1rem;
 		color: black;
 		font-weight: 900;
