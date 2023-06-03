@@ -10,10 +10,12 @@
   --seccion:#5775a2;
   --bordeSeccion:#4672a2;
   --fondoInput:#044c75;
+  --rowEven:#afe4fe;
+  
 }
 a{
 	text-decoration: none;
-	color:white;
+	color:var(--letras);
 	font-size: 1rem;
 }
 .wave {
@@ -267,6 +269,7 @@ a{
 	  P{
 		margin-top:1%;
 		padding: 1%;
+		text-align: center;
 	  }
 	  p>span{
 		font-weight: bold;
@@ -312,16 +315,19 @@ a{
 	.buscador{
 		display: flex;
 		flex-direction: row;	
+		justify-content: center;
+		align-items: center;
 	}
-	div.field1, div.buscador {
+	div.field1 {
 		margin:2%;
 		padding: 2%;
 	}
 	div.field1 > label,div.buscador > label {
 		color: rgb(255, 255, 255);
-		font-size: 1rem;
+		font-size: 1.5rem;
 		font-weight: bold;
 		margin-right: 2%;
+
 	}
 	
 	div.field1 > input, div.buscador > input {
@@ -349,10 +355,13 @@ a{
 		background-color: var(--azul);
 		border-radius: 20px;
 		min-width: 150px;
+		font-size: 1.2rem;
 	}
-	
+	button:hover{
+		background-color: var(--vibrant);
+	}
 	section>div.field2{
-		width:98vw;
+		width:100vw;
 		padding: 0;
 
 	}
@@ -360,21 +369,31 @@ a{
 		padding:0;
 		width:100%;
 		font-size: 1rem;
-		border: 2px solid rgb(255, 255, 255);
+		border: 1px solid rgb(255, 255, 255);
 	}
 	tbody.table>tr {
 		background-color:var(--fondo);
-		border: 2px solid rgb(255, 255, 255);
+		
 		padding: 2%;
 	}
 	table tr td{
-		padding: 0 1%;
-		font-weight: bold;
+		padding-left:5px; 
+		font-weight: bolder;
 	}
 	table thead tr{
 		background-color: var(--azul);
+		
 	}
 	
+	tbody.table>tr:nth-child(odd){
+		background-color:rgb(2, 29, 63);
+		
+	}
+	tbody.table>tr:nth-child(even){
+		background-color: rgb(199, 219, 247);
+		color:black;
+		
+	}
 	
 	
 }

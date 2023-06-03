@@ -4,7 +4,7 @@ import { tarjeta } from "./component.js";
 import { initData } from "./datainicializadora.js";
 import { loader } from "./loader.js";
 
-const LOCAL_API_URL = "/assets/bd/bd.json";
+// const LOCAL_API_URL = "/assets/bd/bd.json";
 
 const {createApp}=Vue;
 const idApp="app";
@@ -13,26 +13,9 @@ const core = {
     data: function(){
         return initData;
     },
-    created:function(){
-        setTimeout(()=>{
-
-            this.user = {
-                nombre: "omar",
-                email: "pepe@gmail.com",
-            };
-        },4000 )
-    },
-    watch:{
-        user:function(){
-           this.cuandoSeCrea= `${this.user.nombre.toUpperCase()} ha sido creado`;
-            setTimeout(()=>{
-                this.cuandoSeCrea=null
-            },1500)
-        },
-    },
     methods:{
         codigoHandler: function(){
-            fetch(LOCAL_API_URL)
+            fetch('https://sheetdb.io/api/v1/0qlufyvfet6b3')
             .then((res) => res.json())
             .then((cod)=>{  
                 const search = document.getElementById("txtBuscar").value;
@@ -48,6 +31,9 @@ const core = {
             });
            
         },
+       
+
+
         familiaHandler: function(){
             fetch('https://sheetdb.io/api/v1/7lsrl0ziy52lf')
             .then((response)=> response.json())

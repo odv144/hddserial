@@ -17,105 +17,11 @@
         <button><a href="./assets/pages/codigo.html">Codigo Equivalencia Toshiba</a></button>
         <button><a href="./assets/pages/familia.html">Identificar Familia WD</a></button>
       </div>
-      <!-- <div id="app">
-        <section>
-          <p></p>
-            WD Marvel Family Identifier <br />
-            Introduce el modelo completo, MDL, Ejemplo: WD5000AAKX-001CA0 <br />
-			O pon solo los ultimos 6 digitos del MDL "001CA0"
-          </p>
-
-          <div class="field1">
-            <label for="buscarF">Modelo:</label>
-            <input
-              type="text"
-              name="buscarF"
-              id="txtBuscarF"
-              placeholder="Buscar Familia de Disco WD"
-            />
-            <p>(puedes poner solo el Short Model "-001CA0")</p>
-            <div class="boton">
-              <button @click="familiaHandler">Buscar</button>
-            </div>
-
-            <div v-if="familia !== null">
-              <h3>Familia del Modelo:</h3>
-              <h3 v-for="fam in familia">
-                <p>Modelo: {{fam.modelo}}</p>
-                <p>Detalle:{{fam.detalle}}</p>
-              </h3>
-            </div>
-            <div v-if="familia==''">
-              <p>
-                No tenemos una respuesta para este código, envianos un emial a
-                soluciones@labs4recovery.com para solicitar mayor información
-              </p>
-            </div>
-            <div v-else class="center">
-              <vue-loader></vue-loader>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div class="field1 field2">
-            </p><h1>
-            Buscador de placas equivalentes USB en SATA para discos mecanicos TOSHIBA<br /></h1>
-            <br />
-            El formato del identificador de las placas Toshiba empieza siempre por la letra G y sigue con 4 a 6 numeros mas una letra<br />
-            Ejemplo: G003309A
-			        <br />
-		       </p>
-            <label for="buscar">Buscar:</label>
-            <input
-              type="text"
-              name="buscar"
-              id="txtBuscar"
-              placeholder="Buscar codigos"
-            />
-            <div class="boton">
-              <button @click="codigoHandler">Traer Datos</button>
-            </div>
-
-            
-            <table v-if="codigos!==null">
-              <thead>
-                <tr>
-                  <td>PCB USB</td>
-                  <td>PCB SATA</td>
-                  <td>FUENTE</td>
-                  <td>PROBADO POR MI</td>
-                  <td>OBSERVACIONES</td>
-                  <td>HDD CON ESE PCB</td>
-                </tr>
-              </thead>
-              <tbody class="table">
-                <tr v-for="cod in codigos">
-                  <td data-titulo="Pcb Usb:">{{cod.pcbUsb}}</td>
-                  <td data-titulo="Pcb Sata:">{{cod.pcbSata}}</td>
-                  <td data-titulo="Fuente:">{{cod.Fuente}}</td>
-                  <td data-titulo="Probado:">{{cod.ProbadoPorMi}}</td>
-                  <td data-titulo="Obs:">{{cod.Observaciones}}</td>
-                  <td data-titulo="Hdd con PCB:">
-                    {{cod.hddSataQueLlevaElPcb}}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          
-                <div v-else class="center">
-                  <div v-if="mensajes!=''">
-                    <p>{{mensajes}}</p>
-                  </div>
-                  
-                  <vue-loader v-else></vue-loader>
-                </div>
-            </div>
-         
-        </section>
-      </div> -->
+    
     </main>
+    <footer>
+     <p>DISEÑO Y CODIFICADO POR <span>ODVSYSTEM </span>   email: omar.virili@gmail.com</p> 
+    </footer>
   </body>
-  <!-- <script src="https://unpkg.com/vue@next"></script>
-  <script type="module" src="./assets/js/index.js"></script> -->
+
 </html>

@@ -21,13 +21,13 @@
       <h3>Utilidades Tecnicas para Laboratorios de Recuperacion de Datos</h3>
       <p><span> WD Marvel Family Identifier</span><br />
             Introduce el modelo completo, MDL, Ejemplo: WD5000AAKX-001CA0 o solo los ultimos 6 digitos del MDL "001CA0"
-          </p>
-
+          (puedes poner solo el Short Model "-001CA0")</p>
       <div id="app">
        
         <section>
-         
           <div class="field1">
+            <div class="buscador">
+
             <label for="buscarF">Modelo:</label>
             <input
               type="text"
@@ -35,11 +35,11 @@
               id="txtBuscarF"
               placeholder="Buscar Familia de Disco WD"
             />
-            <p>(puedes poner solo el Short Model "-001CA0")</p>
+           
             <div class="boton">
               <button @click="familiaHandler">Buscar</button>
             </div>
-
+              </div>
             <div v-if="familia !== null">
               <h3>Familia del Modelo:</h3>
               <h3 v-for="fam in familia">
@@ -61,6 +61,9 @@
       
       </div>
     </main>
+    <footer>
+      <p>DISEÑO Y CODIFICADO POR <span>ODVSYSTEM </span>   email: omar.virili@gmail.com</p> 
+     </footer>
   </body>
   <script src="https://unpkg.com/vue@next"></script>
   <script type="module" src="/assets/js/index.js"></script>
