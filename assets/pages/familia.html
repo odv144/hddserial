@@ -18,7 +18,7 @@
         <button><a href="../../index.html">Home</a></button>
         <button><a href="/assets/pages/codigo.html">Codigo Equivalencia Toshiba</a></button>
       </div>
-      <h1>Utilidades Tecnicas para Laboratorios de Recuperacion de Datos</h1>
+      <h3>Utilidades Tecnicas para Laboratorios de Recuperacion de Datos</h3>
       <p><span> WD Marvel Family Identifier</span><br />
             Introduce el modelo completo, MDL, Ejemplo: WD5000AAKX-001CA0 o solo los ultimos 6 digitos del MDL "001CA0"
           </p>
@@ -47,14 +47,13 @@
                 <p>Detalle:{{fam.detalle}}</p>
               </h3>
             </div>
-            <div v-if="familia==''">
-              <p>
-                No tenemos una respuesta para este código, envianos un emial a
-                soluciones@labs4recovery.com para solicitar mayor información
-              </p>
-            </div>
-            <div v-else class="center">
-              <vue-loader></vue-loader>
+            <div v-else>
+              <div v-if="mensajes!=''">
+                {{mensajes}}
+              </div>
+              <div v-else class="center">
+                <vue-loader ></vue-loader>
+              </div>
             </div>
           </div>
         </section>

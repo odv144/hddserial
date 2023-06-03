@@ -34,24 +34,19 @@ const core = {
         codigoHandler: function(){
             fetch(LOCAL_API_URL)
             .then((res) => res.json())
-            .then((cod)=>{
-                //this.codigos = cod;
+            .then((cod)=>{  
                 const search = document.getElementById("txtBuscar").value;
-                //const search = 'G003296A';
                 cod = cod.filter(c=>c.pcbUsb.startsWith(search.toUpperCase()));
                 if(cod.pcbUsb === null|| cod==''){
-                    // this.mensaje=true,
-                    this.mensajes='No tenemos una respuesta para este código, envianos un emial a soluciones@labs4recovery.com para solicitar mayor información';
-                    this.codigos=null;
-                    console.log('vacio'+cod+"codigo"+this.mensajes);
+                 this.mensajes='No tenemos una respuesta para este código, envianos un emial a soluciones@labs4recovery.com para solicitar mayor información';
+                 this.codigos=null;
                 }else{
-                    console.log('con datos'+cod);
                     this.mensajes=false;
                     this.codigos= cod;
                 }
                 
             });
-            // .then((cod) => (console.log(typeof(cod))));
+           
         },
         familiaHandler: function(){
             fetch('https://sheetdb.io/api/v1/7lsrl0ziy52lf')
@@ -68,7 +63,11 @@ const core = {
                 } 
                 
                 this.familia=data.filter(c=>c.codigo.toUpperCase() == codLimpio.toUpperCase());
-                
+               
+                if(this.familia.length===0){
+                    this.mensajes='No tenemos una respuesta para este código, envianos un emial a soluciones@labs4recovery.com para solicitar mayor información';
+                    this.familia=null;
+                }
                 
             });
         },
